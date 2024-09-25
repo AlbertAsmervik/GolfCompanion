@@ -1,0 +1,80 @@
+<div class="stats-container">
+    <!-- Title for the stats overview -->
+    <h2 class="stats-title">Albert´s Stats Overview</h2>
+
+    <div class="stats-content">
+        <div class="left-section">
+            <!-- Club Distances Section -->
+            <section class="club-distance">
+                <h3>Club Distances</h3>
+                <!-- Table displaying club names and their average distances -->
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Club</th>
+                            <th>Average Distance (meters)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Iterate over each club to display its name and average distance -->
+                        <tr *ngFor="let club of clubs">
+                            <td>{{ club.name }}</td>
+                            <td>{{ club.distance }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- Best Course Section -->
+            <section class="best-course card">
+                <!-- Header for the best course section -->
+                <div class="card-header">
+                    <h3>Course Record</h3>
+                </div>
+                <!-- Display details of the best course -->
+                <div class="card-body">
+                    <p><strong>Course Name:</strong> {{ bestCourse.courseName }}</p>
+                    <p><strong>Strokes:</strong> {{ bestCourse.strokes }}</p>
+                    <p><strong>Par:</strong> {{ bestCourse.par }}</p>
+                </div>
+            </section>
+        </div>
+        <div class="right-section">
+            <!-- Rounds for Player 4 Section -->
+            <section class="rounds">
+                <!-- Title for the latest rounds section -->
+                <h3>My Latest Rounds</h3>
+                <!-- Table displaying the latest rounds, including course name, date, and score -->
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Course</th>
+                            <th>Date</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Iterate over each round to display its details -->
+                        <tr *ngFor="let round of rounds.slice(0, 11)" [ngClass]="{'point-score': round.score > 38}">
+                            <td>{{ round.courseName }}</td>
+                            <td>{{ round.date | date:'mediumDate'}}</td>
+                            <td>{{ round.score }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <!-- User Handicap Section -->
+            <section class="user-handicap card">
+                <div class="card-header">
+                    <h3>Currently</h3>
+                </div>
+                <div class="card-body">
+                    <div class="handicap-container">
+                        <div class="handicap-number">{{ handicap }}</div>
+                        <div class="handicap-label">hcp</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+

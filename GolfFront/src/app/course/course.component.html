@@ -1,0 +1,102 @@
+<!-- Section for listing courses -->
+<div class="course-container">
+  <h2>Courses List</h2>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th> <!-- Table header for course ID -->
+          <th>Name</th> <!-- Table header for course name -->
+          <th>Par</th> <!-- Table header for course par -->
+          <th>Strokes</th> <!-- Table header for course strokes -->
+          <th>Actions</th> <!-- Table header for actions -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Iterate through the courses array and display each course -->
+        <tr *ngFor="let course of courses">
+          <td>{{ course.courseID }}</td> <!-- Display course ID -->
+          <td>{{ course.courseName }}</td> <!-- Display course name -->
+          <td>{{ course.par }}</td> <!-- Display course par -->
+          <td>{{ course.strokes }}</td> <!-- Display course strokes -->
+          <td>
+            <button class="btn btn-edit" (click)="editCourse(course)">Edit</button> <!-- Button to edit the course -->
+            <button class="btn btn-delete" (click)="deleteCourse(course.courseID)">Delete</button> <!-- Button to delete the course -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Section for adding a new course -->
+<div class="form-section">
+  <h2>Add New Course</h2>
+  <!-- Form to add a new course -->
+  <form (ngSubmit)="addCourse()" #courseForm="ngForm">
+    <div class="form-group">
+      <label for="name">Course Name:</label> <!-- Label for course name input -->
+      <input type="text" id="name" class="form-control" [(ngModel)]="newCourse.courseName" name="courseName" required #courseName="ngModel"> <!-- Input for course name -->
+      <div *ngIf="courseName.invalid && courseName.touched" class="validation-message">
+        Course name is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="par">Course Par:</label> <!-- Label for course par input -->
+      <input type="number" id="par" class="form-control" [(ngModel)]="newCourse.par" name="par" required #coursePar="ngModel"> <!-- Input for course par -->
+      <div *ngIf="coursePar.invalid && coursePar.touched" class="validation-message">
+        Course par is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="strokes">Strokes:</label> <!-- Label for course strokes input -->
+      <input type="number" id="strokes" class="form-control" [(ngModel)]="newCourse.strokes" name="strokes" required #courseStrokes="ngModel"> <!-- Input for course strokes -->
+      <div *ngIf="courseStrokes.invalid && courseStrokes.touched" class="validation-message">
+        Number of strokes is required.
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-add" [disabled]="!courseForm.valid">Add Course</button> <!-- Button to submit the form and add a new course -->
+  </form>
+</div>
+
+
+<!-- Section for editing an existing course -->
+<div *ngIf="selectedCourse" class="form-section">
+  <h2>Edit Course</h2>
+  <!-- Form to edit an existing course -->
+  <form (ngSubmit)="updateCourse()" #editCourseForm="ngForm">
+    <div class="form-group">
+      <label for="id">Course ID:</label> <!-- Label for course ID input -->
+      <input type="text" id="id" class="form-control" [(ngModel)]="selectedCourse.courseID" name="courseID" readonly> <!-- Input for course ID (readonly) -->
+    </div>
+
+    <div class="form-group">
+      <label for="name">Course Name:</label> <!-- Label for course name input -->
+      <input type="text" id="name" class="form-control" [(ngModel)]="selectedCourse.courseName" name="courseName" required #editCourseName="ngModel"> <!-- Input for course name -->
+      <div *ngIf="editCourseName.invalid && editCourseName.touched" class="validation-message">
+        Course name is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="par">Course Par:</label> <!-- Label for course par input -->
+      <input type="number" id="par" class="form-control" [(ngModel)]="selectedCourse.par" name="par" required #editCoursePar="ngModel"> <!-- Input for course par -->
+      <div *ngIf="editCoursePar.invalid && editCoursePar.touched" class="validation-message">
+        Course par is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="strokes">Course Strokes:</label> <!-- Label for course strokes input -->
+      <input type="number" id="strokes" class="form-control" [(ngModel)]="selectedCourse.strokes" name="strokes" required #editCourseStrokes="ngModel"> <!-- Input for course strokes -->
+      <div *ngIf="editCourseStrokes.invalid && editCourseStrokes.touched" class="validation-message">
+        Number of strokes is required.
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-update" [disabled]="!editCourseForm.valid">Update Course</button> <!-- Button to submit the form and update an existing course -->
+  </form>
+</div>

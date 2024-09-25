@@ -1,0 +1,98 @@
+<!-- Section for listing players -->
+<div class="player-container">
+  <!-- Header with sorting button -->
+  <div class="header-with-sort">
+      <h2>Players List</h2>
+      <button class="btn btn-sort" (click)="toggleSortOrder()">Sort by Handicap</button>
+  </div>
+  <!-- Table displaying player information -->
+  <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Handicap</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through players and display their details -->
+            <tr *ngFor="let player of players">
+                <td>{{ player.playerID }}</td>
+                <td>{{ player.firstName }}</td>
+                <td>{{ player.lastName }}</td>
+                <td>{{ player.handicap }}</td>
+                <!-- Action buttons for editing and deleting player -->
+                <td>
+                    <button class="btn btn-edit" (click)="editPlayer(player)">Edit</button>
+                    <button class="btn btn-delete" (click)="deletePlayer(player.playerID)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Section for adding a new player -->
+<div class="form-section">
+  <h2>Add New Player</h2>
+  <!-- Form for adding a new player -->
+  <form (ngSubmit)="addPlayer()" #playerForm="ngForm">
+      <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" class="form-control" [(ngModel)]="newPlayer.firstName" name="firstName" required #firstName="ngModel">
+          <div *ngIf="firstName.invalid && firstName.touched" class="validation-message">
+              First name is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" class="form-control" [(ngModel)]="newPlayer.lastName" name="lastName" required #lastName="ngModel">
+          <div *ngIf="lastName.invalid && lastName.touched" class="validation-message">
+              Last name is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="handicap">Handicap:</label>
+          <input type="number" id="handicap" class="form-control" [(ngModel)]="newPlayer.handicap" name="handicap" required #handicap="ngModel">
+          <div *ngIf="handicap.invalid && handicap.touched" class="validation-message">
+              Handicap is required.
+          </div>
+      </div>
+      <button type="submit" class="btn btn-add" [disabled]="!playerForm.valid">Add Player</button>
+  </form>
+</div>
+
+<!-- Section for editing an existing player -->
+<div *ngIf="selectedPlayer" class="form-section">
+  <h2>Edit Player</h2>
+  <!-- Form for editing an existing player -->
+  <form (ngSubmit)="updatePlayer()" #editPlayerForm="ngForm">
+      <div class="form-group">
+          <label for="editFirstName">First Name:</label>
+          <input type="text" id="editFirstName" class="form-control" [(ngModel)]="selectedPlayer.firstName" name="firstName" required #editFirstName="ngModel">
+          <div *ngIf="editFirstName.invalid && editFirstName.touched" class="validation-message">
+              First name is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="editLastName">Last Name:</label>
+          <input type="text" id="editLastName" class="form-control" [(ngModel)]="selectedPlayer.lastName" name="lastName" required #editLastName="ngModel">
+          <div *ngIf="editLastName.invalid && editLastName.touched" class="validation-message">
+              Last name is required.
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="editHandicap">Handicap:</label>
+          <input type="number" id="editHandicap" class="form-control" [(ngModel)]="selectedPlayer.handicap" name="handicap" required #editHandicap="ngModel">
+          <div *ngIf="editHandicap.invalid && editHandicap.touched" class="validation-message">
+              Handicap is required.
+          </div>
+      </div>
+      <button type="submit" class="btn btn-update" [disabled]="!editPlayerForm.valid">Update Player</button>
+  </form>
+</div>
+
+  

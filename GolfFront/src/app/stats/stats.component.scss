@@ -1,0 +1,110 @@
+/* Styles for the container holding the statistics */
+.stats-container {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the title of the statistics */
+.stats-title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: #333; 
+}
+
+/* Styles for the container holding the content */
+.stats-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styles for the left and right sections within the content */
+.left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    width: 48%; 
+}
+
+/* Styles for headings within the statistics */
+h2, h3 {
+    text-align: center;
+    
+}
+
+/* Styles for tables within the statistics */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+/* Styles for table header and data cells */
+th,td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Styles for table header cells */
+th {
+    background-color: #f4f4f4;
+}
+
+/* Styles for sections within the statistics */
+.club-distance, .best-course, .rounds {
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+/* Styles for the best-course section */
+.best-course {
+    background-color: #e9ffe9; 
+}
+
+/* Styles for paragraph elements */
+p {
+    font-size: 16px;
+}
+
+/* Styles for rows with high scores in the rounds section */
+.point-score {
+    background-color: #DFF0D8 
+}
+
+/* Styles for the user handicap section */
+.user-handicap {
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the handicap container */
+.handicap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* Styles for the handicap number */
+.handicap-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+/* Styles for the handicap label */
+.handicap-label {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 2.4rem;
+}
+

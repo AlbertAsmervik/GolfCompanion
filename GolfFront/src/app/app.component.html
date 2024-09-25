@@ -1,0 +1,40 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <!-- Brand/logo -->
+      <li class="nav-item">
+        <a class="navbar-brand" href="home/">
+        </a>
+      </li>
+
+      <!-- Navigation links -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/courses" routerLinkActive="active">Courses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/players" routerLinkActive="active">Players</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/stats" routerLinkActive="active">Stats</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Content will be rendered here based on the route -->
+<router-outlet></router-outlet>
+
+<!-- Footer--> 
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">&copy; {{ currentYear }} Albert's Golf Companion.</span>
+    <!-- Golf Fact Section -->
+    <div class="golf-fact">Did you know? {{ golfFact }}</div>
+  </div>
+</footer>
+
+

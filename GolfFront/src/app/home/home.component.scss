@@ -1,0 +1,105 @@
+.home-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+
+  /* Hero section styling */
+  .hero-section {
+      background-image: url('/assets/Golfball2.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding: 7rem 0;
+      color: rgb(255, 255, 255);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style for hero section heading */
+  .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+
+  /* Style for hero section paragraph */
+  .hero-section p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+  }
+
+  /* New container for side-by-side layout */
+  .info-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      /* Style for weather search section */
+      .search-weather {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem; 
+      }
+
+      /* Style for weather search input */
+      .search-weather input[type="text"] {
+          flex: 1; 
+          padding: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1rem;
+      }
+
+      /* Style for weather search button */
+      .search-weather button {
+          padding: 0.5rem 1rem;
+          margin-left: 1rem; 
+          border: none;
+          border-radius: 4px;
+          background-color: #3b7a57; 
+          color: #fff; 
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s ease-in-out; 
+      }
+
+      /* Style for weather search button on hover */
+      .search-weather button:hover {
+          background-color: #3b7a57a7;
+      }
+
+      /* Style for weather and tournaments sections */
+      .weather-section, .tournaments-section {
+          flex: 1;
+          background-color: #f9f9f9;
+          padding: 2rem;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out; 
+      }
+
+      /* Move the section slightly upward on hover */
+      .weather-section:hover, .tournaments-section:hover {
+          transform: translateY(-5px);
+      }
+
+      /* Style for section headings */
+      .weather-section h3, .tournaments-section h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          font-weight: bold; 
+          color: #333; 
+      }
+
+      h2 {
+          margin-bottom: 1rem;
+      }
+
+      /* Responsive design adjustments */
+      @media (max-width: 768px) {
+          flex-direction: column;
+      }
+    }
+  }

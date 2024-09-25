@@ -1,0 +1,45 @@
+<div class="home-container">
+  <!-- Hero section -->
+  <section class="hero-section">
+      <h1>Albert´s Golf Companion</h1>
+  </section>
+
+  <!-- Information section -->
+  <div class="info-section">
+      <!-- Weather section -->
+      <section class="weather-section">
+          <h2>Local Weather at Courses</h2>
+          <!-- Weather search form -->
+          <div class="search-weather">
+              <input type="text" [(ngModel)]="locationQuery" placeholder="Enter a location" />
+              <button (click)="loadWeather(locationQuery)">Get Weather</button>
+          </div>
+          <!-- Weather information display -->
+          <div *ngIf="weatherData" class="weather-info">
+              <h3>Weather in {{ weatherData.location.name }}</h3>
+              <p>Temperature: {{ weatherData.current.temp_c }}°C</p>
+              <p>Condition: {{ weatherData.current.condition.text }}</p>
+              <p>Wind: {{ weatherData.current.wind_kph }}kph</p>
+          </div>
+      </section>
+
+      <!-- Tournaments section -->
+      <section class="tournaments-section">
+          <h2>Upcoming Tournaments</h2>
+          <!-- Tournament list -->
+          <div class="tournament-list">
+              <!-- Display each tournament card -->
+              <div *ngFor="let tournament of tournaments" class="tournament-card">
+                  <h3>{{ tournament.tournamentName }}</h3>
+                  <p>Start Date: {{ tournament.startDate | date:'mediumDate' }}</p>
+                  <p>End Date: {{ tournament.endDate | date:'mediumDate' }}</p>
+                  <p>Location: {{ tournament.location }}</p>
+                  <p>Course: {{ tournament.course.courseName }}</p> <!-- Display the course name -->
+              </div>
+          </div>
+      </section>
+  </div>
+</div>
+
+  
+  

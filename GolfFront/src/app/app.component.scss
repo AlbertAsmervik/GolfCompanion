@@ -1,0 +1,88 @@
+/* Navigation Styles */
+nav.navbar {
+    background-color: #3b7a57; /* Background color for the navbar */
+    padding: 0.5rem 1rem; /* Padding for the navbar content */
+    
+
+    /* Styles for the navbar brand */
+    .navbar-brand {
+        font-weight: bold;
+        background-image: url('/assets/logo.jpg'); /* Background image for the brand */
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40px; /* Height of the brand */
+        width: 40px; /* Width of the brand */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px; /* Margin to separate from the links */
+    }
+
+    /* Styles for the navbar links */
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+       
+        
+
+        /* Styles for each navbar item */
+        .nav-item {
+            padding: 0.5rem 1rem;
+            display: flex;
+
+            /* Styles for the link inside the navbar item */
+            .nav-link {
+                color: #fff; /* Text color for the link */
+                text-decoration: none;
+                font-weight: bold;
+                display: flex;
+
+                /* Hover state for the link */
+                &:hover {
+                    color: #ccc; /* Text color on hover */
+                }
+
+                /* Active state for the link */
+                &.active {
+                    color: #ffc107; /* Text color for active link */
+                }
+            }
+        }
+    }
+}
+
+/* Footer Styles */
+footer.footer {
+    background-color: #f5f5f5; /* Background color for the footer */
+    padding: 1rem; /* Padding for the footer content */
+    text-align: center; /* Center alignment for the footer text */
+
+    /* Styles for the text-muted class */
+    .text-muted {
+        color: #6c757d; /* Text color for muted text */
+        display: block;
+        margin-bottom: 0.25rem; /* Margin for spacing */
+    }
+
+    /* Styles for the golf-fact class */
+    .golf-fact {
+        font-size: 1rem; /* Font size for the fact */
+        color: #3b7a57; /* Text color for the fact */
+        margin-top: 0.25rem; /* Margin for spacing */
+        background-color: #f3f3f3; /* Background color for the fact */
+        padding: 12px 16px; /* Padding for the fact content */
+    }
+}
+
+
+
+
+  
+  
+  
+ 
+  
+  
