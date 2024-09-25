@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GolfApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17075d8df921cdf1ec9af7fe16eca4913beb18a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f3a5649019c272b391169790f91c0e82a714fea")]
 [assembly: System.Reflection.AssemblyProductAttribute("GolfApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GolfApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

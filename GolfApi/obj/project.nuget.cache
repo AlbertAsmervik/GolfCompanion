@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nu52NemUBmadpzJEXxZk/RO48PPhVuJef1E+5+YMbwFHO4u6RtUIF/0ru+ZdvIl9TUk6h0wB5UOd0FTuugnEuw==",
+  "dgSpecHash": "eVOwDbK6vbzyf2muxruBJQ+911b0usOqHDztKJfzYnODcFbC1OwGPY9hTjMHmuqSKqb6lmeEAzF/H4Hlw0DLfA==",
   "success": true,
-  "projectFilePath": "/Users/albertasmervik/Desktop/Github/GolfOG/GolfApi/GolfApi.csproj",
+  "projectFilePath": "/Users/albertasmervik/Desktop/GolfCompanion/GolfApi/GolfApi.csproj",
   "expectedPackageFiles": [
     "/Users/albertasmervik/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/albertasmervik/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",

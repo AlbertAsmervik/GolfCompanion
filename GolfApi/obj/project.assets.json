@@ -4470,11 +4470,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/albertasmervik/Desktop/Github/GolfOG/GolfApi/GolfApi.csproj",
+      "projectUniqueName": "/Users/albertasmervik/Desktop/GolfCompanion/GolfApi/GolfApi.csproj",
       "projectName": "GolfApi",
-      "projectPath": "/Users/albertasmervik/Desktop/Github/GolfOG/GolfApi/GolfApi.csproj",
+      "projectPath": "/Users/albertasmervik/Desktop/GolfCompanion/GolfApi/GolfApi.csproj",
       "packagesPath": "/Users/albertasmervik/.nuget/packages/",
-      "outputPath": "/Users/albertasmervik/Desktop/Github/GolfOG/GolfApi/obj/",
+      "outputPath": "/Users/albertasmervik/Desktop/GolfCompanion/GolfApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/albertasmervik/.nuget/NuGet/NuGet.Config"
